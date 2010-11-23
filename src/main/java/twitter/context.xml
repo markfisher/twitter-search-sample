@@ -8,7 +8,7 @@
 		http://www.springframework.org/schema/integration/twitter http://www.springframework.org/schema/integration/twitter/spring-integration-twitter.xsd">
 
 	<twitter:search-inbound-channel-adapter query="spring integration" channel="logger">
-		<poller fixed-rate="60000" max-messages-per-poll="10"/>
+		<poller fixed-rate="60000" max-messages-per-poll="50"/>
 	</twitter:search-inbound-channel-adapter>
 
 	<logging-channel-adapter id="logger" expression="payload.fromUser + ': ' + payload.text"/>	
